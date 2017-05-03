@@ -200,7 +200,7 @@ module SRT
         end
       end
 
-      if lines.reject! { |line| line.end_time < 0 }
+      if lines.reject! { |line| line.start_time < 0 }
         lines.sort_by! { |line| line.sequence }
         lines.each_with_index do |line, index|
          line.sequence = index + 1
